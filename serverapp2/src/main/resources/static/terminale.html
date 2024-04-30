@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            background-image: url('js/spurs.jpg');
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        #terminalForm {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .createButton, .deleteButton {
+            padding: 12px;
+            margin: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .createButton {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .createButton:hover {
+            background-color: #45a049;
+        }
+
+        .deleteButton {
+            background-color: #FF5733;
+            color: white;
+        }
+
+        .deleteButton:hover {
+            background-color: #E74C3C;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/terminal.js"></script>
+</head>
+
+<body>
+<div class="container">
+    <h1>Utilizeaza terminale</h1>
+    <div id="terminalForm">
+        <label for="identificator">ID:</label>
+        <input type="text" id="identificator"><br><br>
+        <label for="nume_t">Nume:</label>
+        <input type="text" id="nume_t"><br><br>
+        <button class="createButton" onclick="createTerminal(document.getElementById('identificator').value, document.getElementById('nume_t').value)">Creaza Terminal</button>
+        <button class="deleteButton" onclick="deleteTerminal(document.getElementById('identificator').value)">Stergere Terminal</button>
+    </div>
+</div>
+</body>
+
+</html>
